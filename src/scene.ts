@@ -51,7 +51,7 @@ export class SceneOne extends Scene {
       "Some have lost their leaves for the winter, bare and true and exposed to the world.",
       "Others are evergreen and no outside circumstance, changing season or otherwise, could convince them to change their emerald green uniforms.",
       "As you drive, you wonder who lives in a place like this.",
-      "Before you can decide, a flash of orange darts into your peripheral vision note- screen could flash orange here, and interrupts your wandering mind.",
+      "Before you can decide, a flash of orange darts into your peripheral vision, and interrupts your wandering mind.",
       "You slam on the breaks and squeeze your eyes shut.",
       "Beneath you, you hear your tires screech and rubber burn.",
       "Although you have braced your body for impact, none comes.",

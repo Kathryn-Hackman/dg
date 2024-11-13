@@ -16,7 +16,7 @@ export function MainDriver(element: HTMLButtonElement) {
         ? scene.readWithColorEffect(nextLine)
         : "white";
     typeWriter
-      .pauseFor(1)
+      .changeDelay(35)
       .callFunction(() => {
         element.disabled = true;
         element.hidden = true;
@@ -29,6 +29,7 @@ export function MainDriver(element: HTMLButtonElement) {
         element.disabled = false;
         element.hidden = false;
         element.innerHTML = "Next";
+        curr.innerHTML = nextLine;
       })
       .start();
     count += 1;
