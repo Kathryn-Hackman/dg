@@ -3,11 +3,14 @@ abstract class Scene {
   characters: Array<Character>;
   dialogue: Array<string>;
   line: number;
+  sceneNumber: number
+
   // todo : choices
-  constructor(characters: Array<Character>, dialogue: Array<string>) {
+  constructor(characters: Array<Character>, dialogue: Array<string>, sceneNumber: number) {
     this.characters = characters;
     this.dialogue = dialogue;
     this.line = 0;
+    this.sceneNumber = sceneNumber;
   }
   getCharacters(): Array<Character> {
     return this.characters;
@@ -31,7 +34,7 @@ abstract class Scene {
 
 export class SceneOne extends Scene {
   constructor() {
-    super([new MainCharacter("Nameless")], SceneOne.getDialogue());
+    super([new MainCharacter("Nameless")], SceneOne.getDialogue(), 1);
   }
 
   readWithColorEffect(dialogue_line: string): string | null | undefined {
@@ -52,15 +55,15 @@ export class SceneOne extends Scene {
       "Others are evergreen and no outside circumstance, changing season or otherwise, could convince them to change their emerald green uniforms.",
       "As you drive, you wonder who lives in a place like this.",
       "Before you can decide, a flash of orange darts into your peripheral vision, and interrupts your wandering mind.",
-      "You slam on the breaks and squeeze your eyes shut.",
+      "You slam on the brakes and squeeze your eyes shut.",
       "Beneath you, you hear your tires screech and rubber burn.",
       "Although you have braced your body for impact, none comes.",
       "You open your eyes after what feels like years but could have only been moments later to find the source of your premature stop content and licking his paw on the other side of the road.",
-      "A hideous orange tabby cat with patchy fur and amber glowing eyes stares back at you as you inhale deeply to try to catc  h your breath.",
+      "A hideous orange tabby cat with patchy fur and amber glowing eyes stares back at you as you inhale deeply to try to catch your breath.",
       "He doesn’t look surprised to see you, if anything, he seems mildly annoyed.",
       "Perhaps he is unaware of how he has just cheated death, or perhaps he had a few lives to spare.",
       "You count yourself lucky to have been the only car on this stretch of the road for miles.",
-      "There’s no telling whether or not a driver behind you, had there been one, would have possessed your same…cat-like reflexes.",
+      "There’s no telling whether or not a driver behind you, had there been one, would have possessed your…cat-like reflexes.",
       "You touch your hands to your face and then to your stomach and are relieved to realize you are indeed alive.",
       "Who’s cat could that be anyway, roaming alone all the way out here? Around his neck you can see he is wearing a blue tattered collar holding a name tag, but the writing is too far away for your eyes to make out.",
       "Maybe when you were younger.",
@@ -76,7 +79,7 @@ export class SceneOne extends Scene {
       "Empty? But you just put gas in the car….",
       "oh.",
       "You didn’t fill up the tank this morning.",
-      "It’s hard not to be angry with yourself for forgetting something so vital.",
+      "It’s hard not to be angry with yourself for forgetting.",
       "You try to give yourself grace.",
       "There’s been a lot on your mind lately.",
       "Well, nothing to do about it now.",
